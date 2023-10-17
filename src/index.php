@@ -1,6 +1,5 @@
 <?php
-    session_start(); 
-    $usuarios = empty($_SESSION['usuarios']) ? [] : $_SESSION['usuarios'];
+    require_once('session.php');
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +11,10 @@
 </head>
 <body>
     <a href="/criar-usuario.php">
-        Criar usuário
+        Criar usuários
     </a>
     <ul>
-        <?php foreach($usuarios as $usuario) { ?>
+        <?php foreach(listarUsuarios() as $usuario) { ?>
             <li>
                 <?= $usuario['nome'] ?>
                 <a href="/excluir-usuario.php?id=<?= $usuario['id'] ?>">

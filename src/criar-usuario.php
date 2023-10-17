@@ -7,7 +7,7 @@
 </head>
 <body>
     <form action="/criar-usuario-sessao.php" method="POST">
-        <label for="">
+        <label for="nome">
             Nome do usuário
         </label>
         <input type="text" name="nome">
