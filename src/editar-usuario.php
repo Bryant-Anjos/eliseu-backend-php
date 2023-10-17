@@ -1,3 +1,7 @@
+<?php
+    $id = $_GET['id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/editar-usuario-sessao.php" method="GET">
+    <form action="/editar-usuario-sessao.php?id=<?= $id ?>" method="POST">
         <label for="">
             Nome do usuário
         </label>
